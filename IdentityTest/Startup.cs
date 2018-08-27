@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using IdentityTest.Middleware;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -46,6 +47,21 @@ namespace IdentityTest
             app.UseAuthentication();
 
             app.UseStaticFiles();
+
+            ////添加权限中间件, 一定要放在app.UseAuthentication后
+            app.UsePermission(new PermissionMiddlewareOption()
+            {
+                LoginAction = @"/login",
+                NoPermissionAction = @"/denied",
+                //这个集合从数据库中查出所有用户的全部权限
+                UserPerssions = new List<UserPermission>()
+                {
+                    new UserPermission {Url = "/", UserName = "gsw"},
+                    new UserPermission {Url = "/home/contact", UserName = "gsw"},
+                    new UserPermission {Url = "/home/about", UserName = "aaa"},
+                    new UserPermission {Url = "/", UserName = "aaa"}
+                }
+            });
 
             app.UseMvc(routes =>
             {
