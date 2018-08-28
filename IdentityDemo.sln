@@ -9,6 +9,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleApp1", "ConsoleApp1\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JwtAuthSample", "JwtAuthSample\JwtAuthSample.csproj", "{9473E8FC-EE25-4CB1-B5F9-CC6130814FC0}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ID4", "ID4", "{B742BDCE-2D51-41CC-9D85-9C52C803EBEE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdentityServerCenter", "IdentityServerCenter\IdentityServerCenter.csproj", "{2AC46D1C-DB42-473A-B24C-C5A211F6F0D0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,9 +31,16 @@ Global
 		{9473E8FC-EE25-4CB1-B5F9-CC6130814FC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9473E8FC-EE25-4CB1-B5F9-CC6130814FC0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9473E8FC-EE25-4CB1-B5F9-CC6130814FC0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2AC46D1C-DB42-473A-B24C-C5A211F6F0D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2AC46D1C-DB42-473A-B24C-C5A211F6F0D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2AC46D1C-DB42-473A-B24C-C5A211F6F0D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2AC46D1C-DB42-473A-B24C-C5A211F6F0D0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{2AC46D1C-DB42-473A-B24C-C5A211F6F0D0} = {B742BDCE-2D51-41CC-9D85-9C52C803EBEE}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7EA72907-FF4E-485D-BEF3-5C97F26F7F05}
